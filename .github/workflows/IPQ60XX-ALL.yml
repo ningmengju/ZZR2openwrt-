@@ -102,13 +102,6 @@ jobs:
         cd $OPENWRT_PATH
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        
-    - name: Load custom feeds(加载feeds)
-      run: |
-        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF $OPENWRT_PATH/feeds.conf.default
-        chmod +x $DIY_P1_SH
-        cd $OPENWRT_PATH
-        $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds(升级feeds)
       run: cd $OPENWRT_PATH && ./scripts/feeds update -a   
