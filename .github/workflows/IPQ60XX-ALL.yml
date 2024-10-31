@@ -104,7 +104,7 @@ jobs:
         ./scripts/feeds install -a
         
     - name: Load custom feeds(加载feeds)
-        run: |
+      run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF $OPENWRT_PATH/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd $OPENWRT_PATH
