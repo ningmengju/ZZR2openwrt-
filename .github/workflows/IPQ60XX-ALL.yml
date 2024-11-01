@@ -102,9 +102,6 @@ jobs:
         cd $OPENWRT_PATH
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-
-    - name: Update feeds(升级feeds)
-      run: cd $OPENWRT_PATH && ./scripts/feeds update -a   
   
     - name: Load Custom Configuration(加载自定义配置)
       run: |
